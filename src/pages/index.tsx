@@ -1,4 +1,7 @@
 import Head from "next/head";
+import BtnLeft from "../components/btnleft";
+import BtnRight from "../components/btnright";
+import Heads from "../components/heads";
 
 export default function Home() {
   return (
@@ -9,7 +12,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen w-full"></main>
+      <main className="flex min-h-screen w-full flex-col items-center justify-center">
+        <div className="flex h-full w-full max-w-xl flex-col items-center justify-center rounded-3xl">
+          <Heads />
+          <div className="-mt-[2%] flex h-auto w-full flex-nowrap">
+            <div className="relative h-full w-full">
+              <BtnLeft />
+            </div>
+            <div className="group relative h-full w-full">
+              <BtnRight />
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
